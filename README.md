@@ -1,150 +1,220 @@
-# Random Alarm
+PROJECT SANIMA 🎯
 
-An alarm clock app that asks you what time you want to wake up, tells you
-it's scheduled that alarm, and then rings at a secretly-randomized time
-instead.
+Basic Details
 
-## Why does this project exist?
+Team Name: [Choco-pie]
 
-It doesn't.
+Team Members
 
-More seriously: it exists as a small, self-contained project for practicing
-real front-end fundamentals - timers, randomization, `Date` math, local
-storage, component-based UI state, browser audio, and notifications - all
-wrapped around a joke simple enough to explain in one sentence.
+Team Lead: [Sanima sixen] - [Christ college of engineering]
+Member 2: [Jerome joseph] - [Christ college of engineering]
 
-## Features
+⸻
 
-- Pick a wake-up time with a normal-looking time picker
-- Three randomization modes: **Slightly Evil** (±15 min), **Chaotic**
-  (±1 hour), and **Absolutely Unhinged** (anywhere from 4:00 AM–10:00 AM)
-- **Chaos Mode** to widen the randomization further and add sarcastic
-  status messages while the alarm is armed
-- **Test Mode** to trigger the alarm in ~10 seconds instead of waiting
-  until morning, for quick demos
-- A dramatic "reveal" screen when the alarm rings, showing the requested
-  time vs. the actual time and the difference between them
-- An alarm sound generated in the browser (no external audio files)
-- 20+ randomly-chosen excuses for why the time changed
-- Alarm history and joke statistics ("Trustworthiness: 0%"), saved in
-  `localStorage` so they survive a page refresh
-- If the tab is closed or refreshed while an alarm is armed or ringing,
-  it's restored from `localStorage` when the page reopens
+Project Description
 
-## Technologies used
+PROJECT SANIMA is a deliberately unpredictable alarm clock that completely ignores the wake-up time selected by the user. Instead of ringing when requested, it randomly chooses when to wake the user up.
 
-- [React](https://react.dev/) (function components + hooks, no extra
-  state library)
-- [Vite](https://vite.dev/) as the build tool / dev server
-- Plain CSS (no framework) using CSS custom properties for theming
-- The browser's built-in Web Audio API for sound and `localStorage` for
-  persistence - no backend, no database, no external APIs
+The project turns a simple alarm into a fun and chaotic experience using randomized timing, custom alarm sounds, voice reactions, mood stages, and a sarcastic user interface.
 
-## Project structure
+⸻
 
-```text
-random-alarm/
-├── src/
-│   ├── components/     UI pieces (setup screen, armed screen, etc.)
-│   ├── utils/           Randomization, time formatting, storage, sound
-│   ├── App.jsx          The state machine that ties the screens together
-│   ├── main.jsx         React entry point
-│   └── index.css        All styling and design tokens
-├── public/               Favicon
-├── index.html
-└── package.json
-```
+The Problem (that doesn’t exist)
 
-## How to run it locally
+People have become far too comfortable with predictable alarm clocks.
 
-These steps assume you've never used a terminal before - if you already
-know your way around Node.js, just run `npm install && npm run dev`.
+Traditional alarm clocks actually respect the time set by the user, which is obviously a serious problem for anyone looking for unnecessary chaos in their morning routine.
 
-### 1. Install Node.js (skip if you already have it)
+PROJECT SANIMA solves the completely unnecessary problem of predictable alarms.
 
-Random Alarm needs [Node.js](https://nodejs.org/) to run. To check if you
-already have it, open a terminal:
+⸻
 
-- **Windows:** click Start, type `cmd`, press Enter.
-- **Mac:** open Spotlight (Cmd+Space), type `Terminal`, press Enter.
+The Solution (that nobody asked for)
 
-Then type `node -v` and press Enter. If you see a version number like
-`v20.11.0`, you're set - skip to step 2. If you see an error, download
-the "LTS" installer from [nodejs.org](https://nodejs.org/), run it with
-the default options, then close and reopen your terminal.
+PROJECT SANIMA allows the user to select the time they want to wake up.
 
-### 2. Open the project folder in your terminal
+The application then completely ignores that request and randomly decides when the alarm should actually ring.
 
-In the terminal, type `cd ` (with a trailing space), then drag the
-`random-alarm` folder from your file explorer/Finder into the terminal
-window - it will paste the folder's path automatically. Press Enter.
+When the alarm rings, the user can attempt to stop it, but SANIMA becomes progressively more annoyed with every attempt.
 
-### 3. Install the project's dependencies
+The system includes:
 
-Type:
+* 🎲 Randomized alarm timing
+* 🚨 Custom alarm sound
+* 🔊 Recorded voice reactions
+* 😌 Chill → 🤨 Suspicious → 😤 Annoyed → 😭 Dramatic → 😈 Unhinged mood progression
+* 🛑 Multi-stage alarm dismissal
+* 📜 Alarm history
+* 🧪 Test/Demo mode
+* 🎭 Sarcastic interface and messages
 
-```bash
+⸻
+
+Technical Details
+
+Technologies/Components Used
+
+For Software
+
+Languages Used:
+
+* JavaScript
+* HTML
+* CSS
+
+Frameworks:
+
+* React
+* Vite
+
+Libraries:
+
+* React
+* Vite
+* @vitejs/plugin-react
+
+Tools:
+
+* Visual Studio Code
+* Git
+* GitHub
+* Vercel
+* npm
+* Web Audio / HTML5 Audio APIs
+* Browser Local Storage
+
+For Hardware
+
+Hardware Components:
+
+* None
+
+Specifications:
+
+* Software-only project
+* Runs directly in a web browser
+
+Tools Required:
+
+* Computer/Laptop
+* Modern web browser
+* Internet connection for deployment/access
+
+⸻
+
+Implementation
+
+For Software
+
+Installation
+
+Clone the repository and install the required dependencies:
+git clone https://github.com/sanimasixen/choco-pie.git
+cd choco-pie
 npm install
-```
+Run
 
-and press Enter. This downloads React, Vite, and a couple of small dev
-tools into a `node_modules` folder. It can take a minute the first time;
-you'll see progress text and then your prompt back.
-
-### 4. Start the app
-
-```bash
+Start the development server:
 npm run dev
-```
+To preview the production build locally:
+npm run preview
+Deployment
 
-Vite will print a local address, typically:
+The project can be deployed using Vercel. After connecting the GitHub repository to Vercel, the project can be configured with:
 
-```text
-➜  Local:   http://localhost:5173/
-```
+* Framework: Vite
+* Build Command: npm run build
+* Output Directory: dist
+* Install Command: npm install
 
-Open that address in your browser (Chrome, Firefox, or Edge all work).
-The app is now running. Leave the terminal window open - closing it stops
-the app.
+Once deployed, PROJECT SANIMA can be accessed directly through a web browser.
 
-### 5. Stop the app
+⸻
 
-Click back into the terminal and press `Ctrl+C`.
+Working Principle
 
-## Known browser limitations
+1. The user selects their desired wake-up time.
+2. SANIMA intentionally ignores the exact time selected.
+3. A random alarm time is generated within a predefined range.
+4. The application waits until the randomly selected time.
+5. The alarm sound starts playing.
+6. The user attempts to dismiss the alarm.
+7. Each unsuccessful/ repeated dismissal attempt increases SANIMA’s mood level.
+8. Voice reactions and sarcastic messages are displayed according to the current mood.
+9. The alarm eventually reaches its final Unhinged 😈 stage.
+10. The alarm event is stored in the alarm history.
 
-- **The tab must stay open.** Browsers don't let regular web pages wake
-  up and run code while completely closed, so this can't reliably alarm
-  you if you close the tab or shut down your browser. It's honest about
-  this rather than pretending otherwise.
-- **Audio needs a first interaction.** Browsers block sound from playing
-  before you've clicked something on the page. Random Alarm "unlocks"
-  audio the moment you press Set Alarm or Test Alarm Sound, so as long as
-  you've done that once, the alarm sound will play normally when it rings.
-- **History and the active alarm live in your browser's `localStorage`.**
-  Clearing your browser data, using a different browser, or browsing in
-  private/incognito mode will reset them.
+11. Mood Progression
+12. Stage
 
-## How the randomization works
+Mood
 
-The core logic lives in `src/utils/randomAlarm.js`, in one function:
-`computeActualAlarm`. It runs exactly once, the moment you press
-**Set Random Alarm** - never on a repeating timer - so the secret time is
-fixed as soon as the alarm is armed:
+Behavior
 
-1. Convert the time you picked (e.g. `07:00`) into the next real `Date`
-   it will occur (today, or tomorrow if that time already passed today).
-2. Depending on the mode:
-   - **Slightly Evil / Chaotic:** pick a random whole number of minutes
-     between `-range` and `+range` (15 or 60), and add it to the
-     requested time.
-   - **Absolutely Unhinged:** ignore the offset idea entirely and pick a
-     random minute somewhere between 4:00 AM and 10:00 AM.
-   - If **Chaos Mode** is on, the offset range for the first two modes is
-     widened by 75%.
-3. Store both the requested time and the real (secret) time. The UI only
-   ever displays the requested time until the alarm actually rings.
+1.😌 Chill
 
-A `setInterval` in `App.jsx` checks every half-second whether the current
-time has reached the secret time, and switches the screen to the
-"SURPRISE" reveal the moment it does.
+Friendly messages and normal alarm
+
+2.🤨 Suspicious
+
+Starts questioning the user’s actions
+
+3.😤 Annoyed
+
+More aggressive messages and reactions
+
+4.😭 Dramatic
+
+Over-the-top emotional responses
+
+5.😈 Unhinged
+
+Maximum chaos and sarcastic reactions
+Key Features
+
+🎲 Randomized Alarm Timing
+The selected wake-up time is used only as a reference. SANIMA generates an unpredictable alarm time.
+
+🚨 Custom Alarm Sound
+Users can experience a customized alarm instead of a standard alarm tone.
+
+🔊 Voice Reactions
+SANIMA can respond to user interactions using recorded voice clips or browser audio capabilities.
+
+🛑 Multi-Stage Dismissal
+Stopping the alarm is intentionally made more difficult as the mood progresses.
+
+📜 Alarm History
+Previous alarm events can be stored locally using the browser’s Local Storage API.
+
+🧪 Test/Demo Mode
+Users can trigger the alarm immediately without waiting for the randomly generated time.
+
+🎭 Sarcastic UI
+The interface displays humorous and unpredictable messages based on the current alarm state.
+
+Technologies Used
+Frontend
+ ├── HTML
+ ├── CSS
+ └── JavaScript
+
+Framework
+ └── React + Vite
+
+Browser APIs
+ ├── HTML5 Audio API
+ └── Local Storage API
+
+Development Tools
+ ├── VS Code
+ ├── Git
+ ├── GitHub
+ ├── npm
+ └── Vercel
+
+ Expected Outcome
+
+PROJECT SANIMA demonstrates how a simple alarm clock can be transformed into an interactive and humorous web application. Rather than focusing on practical alarm functionality, the project uses randomization, audio, UI interactions, and progressive mood changes to create an intentionally chaotic user experience.
+
+The final application is lightweight, requires no additional hardware, and can run directly in a modern web browser.
