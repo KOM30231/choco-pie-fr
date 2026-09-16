@@ -29,7 +29,7 @@ export default function App() {
       setAlarm(restored);
       setScreen(Date.now() >= actualDate.getTime() ? 'ringing' : 'armed');
     } catch (error) {
-      console.warn('PROJECT SANIMA: could not restore saved alarm.', error);
+      console.warn('PROJECT JEROME: could not restore saved alarm.', error);
       clearActiveAlarm();
     }
   }, []);
